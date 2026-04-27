@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- FUNDO -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/war_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- OVERLAY ESCURO -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#55000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- LINHA DE CIMA (AMARELO) -->
+    <LinearLayout
+        android:id="@+id/topRow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btRoll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/dice1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/dice_yellow_1"/>
+
+        <ImageView
+            android:id="@+id/dice2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/dice_yellow_1"/>
+
+        <ImageView
+            android:id="@+id/dice3"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/dice_yellow_1"/>
+    </LinearLayout>
+
+    <!-- BOTÃO -->
+    <Button
+        android:id="@+id/btRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jogar Dados"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#88000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- LINHA DE BAIXO (VERMELHO) -->
+    <LinearLayout
+        android:id="@+id/bottomRow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btRoll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/dice4"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/dice_red_1"/>
+
+        <ImageView
+            android:id="@+id/dice5"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/dice_red_1"/>
+
+        <ImageView
+            android:id="@+id/dice6"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/dice_red_1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
